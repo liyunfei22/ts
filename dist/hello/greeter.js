@@ -57,5 +57,41 @@ function error(message) {
 /*
   Object 表示非原始类型，也就是除 number,string,boolean,null,undefined,symnol
 */
-var obj = 111;
+var obj = {
+    a: 1
+};
 console.log(obj);
+/*
+  类型断言
+
+*/
+var someValue = 'this is a string';
+var strLen = someValue.length;
+var strLen2 = someValue.length;
+// 变量声明
+// let const
+// 解构
+// 解构数组
+var input = [1, 2];
+// let [first, second] = input;
+function f(_a) {
+    var first = _a[0], second = _a[1];
+    console.log(first);
+    console.log(second);
+}
+f(input);
+// 解构对象
+var o = {
+    a: 'foo',
+    b: 12,
+    c: 'bar'
+};
+// let { a, ...passtrough } = o;
+// console.log(passtrough);
+var number1 = o.a, number2 = o.b;
+var a = o.a, b = o.b;
+// 默认值
+function keepWholeObject(wholeObject) {
+    var a = wholeObject.a, _a = wholeObject.b, b = _a === void 0 ? 101 : _a;
+}
+keepWholeObject(o);
