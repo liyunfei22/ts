@@ -103,6 +103,9 @@
 class Greeter {
   static statnderGreeting = 'hello';
   greeting: string;
+  constructor(greeting: string) {
+    this.greeting = greeting
+  }
   greet() {
     if (this.greeting) {
       return 'hellow'

@@ -85,43 +85,34 @@
 // }
 // let employee = new Emploee()
 // employee.fullName = 'li david'
-// var passcode = 'secret passcode';
-// var Employee = /** @class */ (function () {
-//     function Employee() {
+// let passcode = 'secret paddcode';
+// class Employee {
+//   private _fullName: string;
+//   get fullName(): string {
+//     return this._fullName
+//   }
+//   set fullName(newName: string) {
+//     if (passcode && passcode === 'secret passcode') {
+//       this._fullName = newName;
+//     } else {
+//       console.log('Error: ssss')
 //     }
-//     Object.defineProperty(Employee.prototype, "fullName", {
-//         get: function () {
-//             return this._fullName;
-//         },
-//         set: function (newName) {
-//             if (passcode && passcode === 'secret passcode') {
-//                 this._fullName = newName;
-//             }
-//             else {
-//                 console.log('Error: ssss');
-//             }
-//         },
-//         enumerable: false,
-//         configurable: true
-//     });
-//     return Employee;
-// }());
-// var employee = new Employee();
-// employee.fullName = 'Bob Smith';
-// console.log(employee)
-// console.log(Employee.prototype.fullName)
-// 静态属性
-// class Grid {
-//     static origin = {
-//         x: 0,
-//         y: 0
-//     }
-//     calculateDistanceFormOrigin(point: {x:Number;y:Number}) {
-
-//     }
+//   }
 // }
-class Greeter {
-    static standerGreeting = 'hello';
-    greeting: String;
-    
-}
+// let employee = new Employee();
+// employee.fullName = 'Bob Smith'
+var Greeter = /** @class */ (function () {
+    function Greeter(greeting) {
+        this.greeting = greeting;
+    }
+    Greeter.prototype.greet = function () {
+        if (this.greeting) {
+            return 'hellow';
+        }
+        else {
+            return Greeter.statnderGreeting;
+        }
+    };
+    Greeter.statnderGreeting = 'hello';
+    return Greeter;
+}());
