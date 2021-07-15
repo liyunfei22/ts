@@ -1,4 +1,3 @@
-"use strict";
 // class Greeter {
 //   greeting: string;
 //   constructor(message: string) {
@@ -101,18 +100,17 @@
 // }
 // let employee = new Employee();
 // employee.fullName = 'Bob Smith'
-var Greeter = /** @class */ (function () {
-    function Greeter(greeting) {
-        this.greeting = greeting;
+class Greeter {
+  static statnderGreeting = 'hello';
+  greeting: string;
+  constructor(greeting: string) {
+    this.greeting = greeting
+  }
+  greet() {
+    if (this.greeting) {
+      return 'hellow'
+    } else {
+      return Greeter.statnderGreeting
     }
-    Greeter.prototype.greet = function () {
-        if (this.greeting) {
-            return 'hellow';
-        }
-        else {
-            return Greeter.statnderGreeting;
-        }
-    };
-    Greeter.statnderGreeting = 'hello';
-    return Greeter;
-}());
+  }
+}
